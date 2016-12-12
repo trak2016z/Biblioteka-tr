@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="base.definition" template="/WEB-INF/views/layout/layout.jsp">
+        <put-attribute name="title" value="SuperKino - witamy!"></put-attribute>
+        <put-attribute name="header" value=""></put-attribute>
+        <put-attribute name="body" value=""></put-attribute>
+    </definition>
+
+    <definition name="homepage" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/home.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="adminpage" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/admin.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="userpage" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/user.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="login" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/login.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="registration" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/registration.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="registrationok" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/registrationok.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="forgotpassword" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/forgotpassword.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="newpassword" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/newpassword.jsp"></put-attribute>
+    </definition>
+
+    
+   <definition name="403" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/403.jsp"></put-attribute>
+    </definition>
+</tiles-definitions>
