@@ -8,6 +8,9 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import pl.ilonamajchrowska.biblioteka.annotation.ValidEmail;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -64,6 +67,9 @@ public class User {
 	
 	@Column(name = "role", nullable = false)
 	private Integer role;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Books> books = new HashSet<Books>(0);
 
 	public User() {
 		super();
@@ -187,4 +193,19 @@ public class User {
 		this.matchingPassword = matchingPassword;
 	}
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Set<Books> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Set<Books> books) {
+        this.books = books;
+    }
 }

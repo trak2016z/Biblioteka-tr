@@ -4,7 +4,7 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
     <definition name="base.definition" template="/WEB-INF/views/layout/layout.jsp">
-        <put-attribute name="title" value="SuperKino - witamy!"></put-attribute>
+        <put-attribute name="title" value="Biblioteka - witamy!"></put-attribute>
         <put-attribute name="header" value=""></put-attribute>
         <put-attribute name="body" value=""></put-attribute>
     </definition>
