@@ -6,8 +6,8 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 	<property name="host" value="mail.smtp2go.com" />
 	<property name="port" value="2525" />
-	<property name="username" value="ilonamajchrowska" />
-	<property name="password" value="OSK4JgMY0Y27" />
+	<property name="username" value="ilona.majchrowska@op.pl" />
+	<property name="password" value="JiZYlohEDVCU" />
 		
 	<property name="javaMailProperties">
 	   <props>

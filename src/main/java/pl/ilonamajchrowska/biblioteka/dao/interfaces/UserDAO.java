@@ -8,4 +8,5 @@ public interface UserDAO {
 	Integer saveUser(User user);
 	void changePassword(Tokens token);
 	User get(String email);
+
 }

@@ -43,8 +43,3 @@
 					</div>
 					<input type="submit" id="login" value="zarejestruj się" class="btn btn-default" />
 				</form:form>
-
-			
-			
-			
-			

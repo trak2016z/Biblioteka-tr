@@ -1,9 +1,11 @@
 package pl.ilonamajchrowska.biblioteka.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -23,30 +25,32 @@ public class Books {
     @Column(name = "title", length = 60)
     @NotNull
     @NotEmpty
+    @Size(min=1, max=60)
     private String title;
 
     @Column(name = "date")
     @NotNull
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date date;
 
     @Column(name = "pages")
     @NotNull
-    @NotEmpty
     private Integer pages;
 
     @Column(name = "ISBN")
     @NotNull
-    @NotEmpty
     private Integer ISBN;
 
     @Column(name = "publisher", length = 100)
     @NotNull
     @NotEmpty
+    @Size(min=1, max=100)
     private String publisher;
 
     @Column(name = "author", length = 70)
     @NotNull
     @NotEmpty
+    @Size(min=1, max=70)
     private String author;
 
     @ManyToOne

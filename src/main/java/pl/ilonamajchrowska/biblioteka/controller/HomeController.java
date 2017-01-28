@@ -22,17 +22,11 @@ import pl.ilonamajchrowska.biblioteka.model.Bookshelves;
 public class HomeController {
 
 	@Autowired
-	BooksDAOImpl booksDAO;
+	BooksDAO booksDAO;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) throws JsonGenerationException, JsonMappingException, IOException {
-		Books book = booksDAO.getByKey(1);
-		System.out.println(book.getTitle());
-		System.out.println(book.getUser().getName());
-		System.out.println(book.getGenre().getName());
-		System.out.println(book.getBookshelves().size());
-		for(Bookshelves bs : book.getBookshelves())
-		System.out.println(bs.getName());
+
 		return "homepage";
 	}
 	

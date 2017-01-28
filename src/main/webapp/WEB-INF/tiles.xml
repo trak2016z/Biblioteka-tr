@@ -41,8 +41,15 @@
         <put-attribute name="body" value="/WEB-INF/views/newpassword.jsp"></put-attribute>
     </definition>
 
-    
-   <definition name="403" extends="base.definition">
+    <definition name="newbook" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/newbook.jsp"></put-attribute>
+    </definition>
+
+    <definition name="newbooksuccess" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/newbooksuccess.jsp"></put-attribute>
+    </definition>
+
+    <definition name="403" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/403.jsp"></put-attribute>
     </definition>
 </tiles-definitions>
