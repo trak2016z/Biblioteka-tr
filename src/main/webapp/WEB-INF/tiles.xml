@@ -49,6 +49,18 @@
         <put-attribute name="body" value="/WEB-INF/views/newbooksuccess.jsp"></put-attribute>
     </definition>
 
+    <definition name="newgenre" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/newgenre.jsp"></put-attribute>
+    </definition>
+
+    <definition name="newgenresuccess" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/newgenresuccess.jsp"></put-attribute>
+    </definition>
+
+    <definition name="viewall" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/viewall.jsp"></put-attribute>
+    </definition>
+
     <definition name="403" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/403.jsp"></put-attribute>
     </definition>

@@ -4,10 +4,10 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-	<property name="host" value="mail.smtp2go.com" />
+	<property name="host" value="smtp-pulse.com" />
 	<property name="port" value="2525" />
 	<property name="username" value="ilona.majchrowska@op.pl" />
-	<property name="password" value="JiZYlohEDVCU" />
+	<property name="password" value="EigBeeFkER" />
 		
 	<property name="javaMailProperties">
 	   <props>

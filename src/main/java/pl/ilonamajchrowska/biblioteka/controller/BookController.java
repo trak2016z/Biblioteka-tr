@@ -56,7 +56,10 @@ public class BookController {
             return "newbook";
         }
 
-        book.setUser(userDAO.findByUserEmail("ilona.majchrowska@op.pl"));
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String name = auth.getName();
+        pl.ilonamajchrowska.biblioteka.model.User user = userDAO.findByUserEmail(name);
+        book.setUser(user);
         booksDAO.saveBook(book);
         return "newbooksuccess";
     }

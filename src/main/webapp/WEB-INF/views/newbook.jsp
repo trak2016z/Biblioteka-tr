@@ -37,8 +37,8 @@
         <form:errors path="author" element="div" cssClass="error" />
     </div>
     <div class="form-group">
-        <label for="genre">Gatunek:</label>
-        <form:select  path="genre" class="form-control">
+        <label for="genre.id">Gatunek:</label>
+        <form:select  path="genre.id" class="form-control">
             <c:forEach items="${genres}" var="g">
                 <option value="${g.id}">${g.name}</option>
             </c:forEach>
