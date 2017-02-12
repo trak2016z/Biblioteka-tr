@@ -61,6 +61,26 @@
         <put-attribute name="body" value="/WEB-INF/views/viewall.jsp"></put-attribute>
     </definition>
 
+    <definition name="viewbook" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/viewbook.jsp"></put-attribute>
+    </definition>
+
+    <definition name="genres" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/genres.jsp"></put-attribute>
+    </definition>
+
+    <definition name="editgenre" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/editgenre.jsp"></put-attribute>
+    </definition>
+
+    <definition name="editgenresuccess" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/editgenresuccess.jsp"></put-attribute>
+    </definition>
+
+    <definition name="deletegenre" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/deletegenre.jsp"></put-attribute>
+    </definition>
+
     <definition name="403" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/403.jsp"></put-attribute>
     </definition>

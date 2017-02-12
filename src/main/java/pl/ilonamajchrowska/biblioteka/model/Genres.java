@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -21,11 +22,13 @@ public class Genres {
     @Column(name = "name")
     @NotNull
     @NotEmpty
+    @Size(min=1, max=20, message="{namege.size}")
     private String name;
 
     @Column(name = "description")
     @NotNull
     @NotEmpty
+    @Size(min=1, max=60, message="{descge.size}")
     private String description;
 
     @OneToMany

@@ -27,6 +27,11 @@ public class GenresDAOImpl extends AbstractDAO<Integer, Genres> implements Genre
     }
 
     @Override
+    public void deleteGenre(Integer id) {
+        delete(getByKey(id));
+    }
+
+    @Override
     public List<Genres> getAll() {
         Criteria criteria = getSession().createCriteria(Genres.class);
         criteria.add(Restrictions.sqlRestriction("1=1 ORDER BY ID"));

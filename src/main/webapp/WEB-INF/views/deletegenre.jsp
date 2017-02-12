@@ -3,5 +3,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ page session="false"%>
-<div class="alert alert-success">Kategoria została dodana</div>
+<div class="alert alert-danger">${message}</div>
 <a href="<c:url value="/admin/genres"/>" class="btn btn-default">Wróć</a>

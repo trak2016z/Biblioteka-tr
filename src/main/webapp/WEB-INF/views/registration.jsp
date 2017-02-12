@@ -4,7 +4,9 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ page session="false"%>
 <h1 class="pomarancz">REJESTRACJA</h1>
-<p class="bg-danger">${message}</p>
+<c:if test="${not empty message}">
+	<div class="alert alert-danger">${message}</div>
+</c:if>
 				<form:form modelAttribute="user" commandName="user" method="POST" enctype="utf8" target="_self">
 					<div class="form-group">
 						<label for="name">Imię:</label>

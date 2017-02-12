@@ -4,7 +4,9 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ page session="false"%>
 <h1>PANEL LOGOWANIA</h1>
-<p class="bg-danger">${msg}</p>
+<c:if test="${not empty msg}">
+	<div class="alert alert-danger">${msg}</div>
+</c:if>
 	<form:form method="POST" target="_self">
 		<div class="form-group">
 			<label for="username">Adres email:</label>

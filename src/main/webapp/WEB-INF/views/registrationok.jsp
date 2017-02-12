@@ -4,6 +4,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ page session="false"%>
 <h1>REJESTRACJA PRZEBIEGŁA POPRAWNIE</h1>
+
 <p class="bg-success">Możesz się zalogować</p>
 			
 			

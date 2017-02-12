@@ -10,5 +10,6 @@ import java.util.List;
 public interface GenresDAO {
     Genres findById(Integer id);
     void saveGenre(Genres genre);
+    void deleteGenre(Integer id);
     List<Genres> getAll();
 }

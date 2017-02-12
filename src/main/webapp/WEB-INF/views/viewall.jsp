@@ -17,4 +17,3 @@
     </div>
 
     <input type="submit" id="newbook" value="Dodaj książkę" class="btn btn-default" />
-</form:form>
