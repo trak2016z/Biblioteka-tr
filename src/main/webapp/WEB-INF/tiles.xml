@@ -81,7 +81,52 @@
         <put-attribute name="body" value="/WEB-INF/views/deletegenre.jsp"></put-attribute>
     </definition>
 
+    <definition name="viewallbooks" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/viewall.jsp"></put-attribute>
+    </definition>
+
+    <definition name="viewusersbooks" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/usersbooks.jsp"></put-attribute>
+    </definition>
+
+    <definition name="editbook" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/editbook.jsp"></put-attribute>
+    </definition>
+
+    <definition name="editbooksuccess" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/editbooksuccess.jsp"></put-attribute>
+    </definition>
+
     <definition name="403" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/403.jsp"></put-attribute>
     </definition>
+
+    <definition name="usersbookshelves" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/usersbookshelves.jsp"></put-attribute>
+    </definition>
+
+    <definition name="newbookshelves" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/newbookshelve.jsp"></put-attribute>
+    </definition>
+
+    <definition name="newbookshelvesuccess" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/newbookshelvesuccess.jsp"></put-attribute>
+    </definition>
+
+    <definition name="editbookshelves" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/editbookshelve.jsp"></put-attribute>
+    </definition>
+
+    <definition name="editbookshelvesuccess" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/editbookshelvesuccess.jsp"></put-attribute>
+    </definition>
+
+    <definition name="deleteookshelves" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/deletebookshelves.jsp"></put-attribute>
+    </definition>
+
+    <definition name="viewbookshelf" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/viewbookshelf.jsp"></put-attribute>
+    </definition>
+
 </tiles-definitions>

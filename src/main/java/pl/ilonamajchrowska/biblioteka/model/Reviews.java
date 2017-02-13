@@ -23,12 +23,10 @@ public class Reviews {
 
     @Column (name = "mark")
     @NotNull
-    @NotEmpty
     private Integer mark;
 
     @Column (name = "spoiler")
     @NotNull
-    @NotEmpty
     private Boolean spoiler;
 
     @ManyToOne

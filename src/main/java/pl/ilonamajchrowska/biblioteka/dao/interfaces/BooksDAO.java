@@ -10,4 +10,8 @@ public interface BooksDAO {
     Books findById(Integer id);
     void saveBook(Books book);
     List<Books> getAll();
+    List<Books> getAllUsers(Integer id);
+
+    void deleteBook(int i);
 }
+

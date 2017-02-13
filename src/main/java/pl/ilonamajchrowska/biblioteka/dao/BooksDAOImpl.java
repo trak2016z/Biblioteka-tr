@@ -1,6 +1,7 @@
 package pl.ilonamajchrowska.biblioteka.dao;
 
 import org.hibernate.Criteria;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,7 +29,22 @@ public class BooksDAOImpl extends AbstractDAO<Integer, Books> implements BooksDA
     @Override
     public List<Books> getAll() {
         Criteria criteria = getSession().createCriteria(Books.class);
-        criteria.add(Restrictions.sqlRestriction("1=1 ORDER BY ID"));
+        criteria.addOrder(Order.asc("id"));
+        criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
         return (List<Books>) criteria.list();
+    }
+
+    @Override
+    public List<Books> getAllUsers(Integer id) {
+        Criteria criteria = getSession().createCriteria(Books.class);
+        criteria.add(Restrictions.eq("user.id", id));
+        criteria.addOrder(Order.asc("id"));
+        criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
+        return (List<Books>) criteria.list();
+    }
+
+    @Override
+    public void deleteBook(int i) {
+        delete(findById(i));
     }
 }

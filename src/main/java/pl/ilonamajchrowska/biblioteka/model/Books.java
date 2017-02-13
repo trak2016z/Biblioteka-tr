@@ -61,7 +61,16 @@ public class Books {
     @JoinColumn(name = "genre_id")
     private Genres genre;
 
-    @ManyToMany(fetch=FetchType.EAGER, mappedBy = "books")
+    @OneToMany(fetch=FetchType.EAGER)
+    @JoinColumn(name = "book_id")
+    @OrderBy("id")
+    private Set<Reviews> reviews = new HashSet<Reviews>(0);
+
+    @ManyToMany(fetch=FetchType.EAGER, cascade = CascadeType.DETACH)
+    @JoinTable(name = "books_bookshelves", joinColumns = {
+            @JoinColumn(name = "book_id", nullable = false, updatable = false) },
+            inverseJoinColumns = { @JoinColumn(name = "bookshelf_id",
+                    nullable = false, updatable = false) })
     private Set<Bookshelves> bookshelves = new HashSet<Bookshelves>(0);
 
     public Books() {
@@ -77,6 +86,16 @@ public class Books {
         this.author = author;
         this.user = user;
         this.genre = genre;
+        this.reviews = reviews;
+        this.bookshelves = bookshelves;
+    }
+
+    public Set<Reviews> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(Set<Reviews> reviews) {
+        this.reviews = reviews;
     }
 
     public Integer getId() {
@@ -157,5 +176,15 @@ public class Books {
 
     public void setBookshelves(Set<Bookshelves> bookshelves) {
         this.bookshelves = bookshelves;
+    }
+
+    public double getScore(){
+        int s = 0;
+        int i = 0;
+        for(Reviews rev : this.reviews){
+            i++;
+            s+=rev.getMark();
+        }
+        return ((double)s/(double)i);
     }
 }

@@ -51,6 +51,9 @@ CREATE TABLE books_bookshelves
   FOREIGN KEY (bookshelf_id) REFERENCES bookshelves(id)
 );
 
+ALTER TABLE books_bookshelves
+ADD CONSTRAINT UQ_BookId_BSID UNIQUE(book_id, bookshelf_id);
+
 CREATE TABLE reviews
 (
   id SERIAL NOT NULL PRIMARY KEY,

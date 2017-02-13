@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,14 +19,16 @@ public class Bookshelves {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "name", length = 20)
+    @Column(name = "name")
     @NotNull
     @NotEmpty
+    @Size(min=1, max=20)
     private String name;
 
     @Column(name = "description", length = 60)
     @NotNull
     @NotEmpty
+    @Size(min=1, max=60)
     private String description;
 
     @ManyToOne

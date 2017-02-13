@@ -3,5 +3,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ page session="false"%>
-<div class="alert alert-success">Książka została dodana</div>
+<div class="alert alert-success">Książka została edytowana</div>
 <a href="<c:url value="/user/books"/>" class="btn btn-default">Wróć</a>
