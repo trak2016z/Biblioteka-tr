@@ -43,15 +43,15 @@ public class AppConfig {
     }
 	
 	@Bean(name = "dataSource")
-	public BasicDataSource dataSource() {
-		
-		BasicDataSource ds = new BasicDataSource();
-		ds.setDriverClassName("org.postgresql.Driver");
-		ds.setUrl("jdbc:postgresql://localhost:5432/biblioteka");
-		ds.setUsername("postgres");
-		ds.setPassword("root");
-		return ds;
-	}
+    public BasicDataSource dataSource() {
+
+        BasicDataSource ds = new BasicDataSource();
+        ds.setDriverClassName("org.postgresql.Driver");
+        ds.setUrl("jdbc:postgresql://ec2-79-125-118-221.eu-west-1.compute.amazonaws.com:5432/de2rhiqdnoc21t");
+        ds.setUsername("eqnohklyswwxig");
+        ds.setPassword("b4637b47351ff35ca1dcad0ab66701c866c9ae17af385b52346b3d243459ac4d");
+        return ds;
+    }
 	
 	@Bean
     public HibernateTransactionManager txManager() {
