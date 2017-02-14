@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="container">
-	<h1>Hello, world!</h1>
+	<h1>Biblioteczka</h1>
 	<c:if test="${pageContext.request.userPrincipal.name != null}">
 		<a href="<c:url value="/logout" />" >Wyloguj się</a>
 	</c:if>
